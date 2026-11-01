@@ -41,7 +41,7 @@ def iniciar_programa():
             
             titulo, contenido, tags, estado = pedir_datos_nuevo_post(proximo_id)
             
-            # Usamos el perfil de autor por defecto que venías usando
+            # Usamos el perfil de autor por defecto que veníamos usando
             autor_obj = Autor.from_dict(perfil_autor_defecto)
             
             # Instanciamos el objeto de la clase Post

@@ -6,11 +6,11 @@ from blog.modelos import Post, Autor
 # Nombre del archivo donde se guardará todo
 ARCHIVO_JSON = "posts.json"
 
-# Constantes globales que ya tenías definidas
+# Constantes globales que ya estaban definidas
 estados_post = ("borrador", "publicado", "archivado")
 etiquetas_blog = {"Python", "Django", "Web", "Backend", "Listas"}
 
-# Perfil por defecto de tu preentrega 5
+# Perfil por defecto de la preentrega 5
 perfil_autor_defecto = {
     "nombre": "Alberto Gatti",
     "bio": "Analista de Datos.",
@@ -19,13 +19,13 @@ perfil_autor_defecto = {
 }
 
 def obtener_posts_preentrega_5():
-    """Retorna la lista de datos iniciales basada exactamente en tu entrega anterior."""
+    """Retorna la lista de datos iniciales basada exactamente en la pre_entrega anterior."""
     autor_obj = Autor.from_dict(perfil_autor_defecto)
     return [
         Post(1, "Primeros pasos con Python", "En este post veremos cómo empezar a programar con Python.", autor_obj, ["Python", "Principiantes"], "publicado"),
         Post(2, "Qué es Django", "Django es un framework web creado con Python.", autor_obj, ["Python", "Django", "Web"], "borrador"),
         Post(3, "Organizando datos con listas", "Las listas permiten guardar varios elementos en una sola variable.", autor_obj, ["Python", "Listas"], "archivado"),
-        # Mantenemos el post con error intencional para tus pruebas de validación
+        # Mantenemos el post con error intencional para las pruebas de validación
         Post(4, "", "Contenido de prueba con errores", Autor("Ana López", ""), ["Python"], "invalido")
     ]
 

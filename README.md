@@ -10,7 +10,7 @@ Este proyecto consiste en la refactorización de un sistema de Blog modular haci
 ##  Clases del Sistema (`blog/modelos.py`)
 1. **Autor:** Representa al creador de una publicación (atributos: nombre, bio, especialidad, redes sociales). Cuenta con métodos de serialización (`to_dict` y `from_dict`).
 2. **Post:** Representa un artículo del blog. Aplica **composición**, ya que su atributo `autor` almacena una instancia de la clase `Autor`.
-3. **Blog:** Centraliza la lógica operativa del negocio. Almacena la lista de objetos `Post` y provee métodos para buscar por título y filtrar por etiquetas.
+3. **Blog:** Centraliza la lógica operativa del sistema. Almacena la lista de objetos `Post` y provee métodos para buscar por título y filtrar por etiquetas (tags).
 
 ##  Flujo de Persistencia
 - **Carga (Lectura):** Al ejecutar `main.py`, el módulo `datos.py` lee `posts.json`, decodifica el texto y reconstruye los diccionarios transformándolos en instancias de objetos `Post` y `Autor`.
